@@ -9,6 +9,13 @@ npm run build    # type-check + production build to dist/
 npm run preview  # serve dist/ on http://localhost:4173
 ```
 
+## Deploy
+
+Every push to `develop` builds and publishes to GitHub Pages through `.github/workflows/deploy.yml`:
+https://bairikirankumar.github.io/himalayan-trecking-company/
+
+The Vite `base` is relative (`./`) and media paths go through `src/lib/asset.ts`, so the same build works locally and under the repo path.
+
 ## Sections and their one effect
 
 | # | Section | Effect | Reduced motion |

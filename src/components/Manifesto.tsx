@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { gsap, MQ, SplitText, useGSAP } from "../lib/gsap";
+import { asset } from "../lib/asset";
 
 function Inline({ src, alt }: { src: string; alt: string }) {
   return <img className="manifesto__img" src={src} alt={alt} width={240} height={150} loading="lazy" decoding="async" />;
@@ -37,9 +38,9 @@ export function Manifesto() {
   return (
     <section ref={root} className="manifesto" aria-label="How we trek">
       <p className="manifesto__text">
-        We walk slowly <Inline src="/media/trek-kuari.webp" alt="Oak forest and snow peaks on the Kuari Pass" /> on purpose.
-        Groups of twelve at most, led by people <Inline src="/media/leader-2.webp" alt="Ananya Negi, trek leader" /> from
-        the valleys we trek, on routes <Inline src="/media/gallery-2.webp" alt="Tents beside a glacial stream" /> we have
+        We walk slowly <Inline src={asset("media/trek-kuari.webp")} alt="Oak forest and snow peaks on the Kuari Pass" /> on purpose.
+        Groups of twelve at most, led by people <Inline src={asset("media/leader-2.webp")} alt="Ananya Negi, trek leader" /> from
+        the valleys we trek, on routes <Inline src={asset("media/gallery-2.webp")} alt="Tents beside a glacial stream" /> we have
         walked every season for years.
       </p>
     </section>

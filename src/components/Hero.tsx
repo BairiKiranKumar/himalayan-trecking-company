@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap, MQ, useGSAP } from "../lib/gsap";
+import { asset } from "../lib/asset";
 import { ArrowDownRightIcon, PauseIcon, PlayIcon } from "@phosphor-icons/react";
 import { Magnetic } from "./Magnetic";
 
@@ -96,7 +97,7 @@ export function Hero() {
         <video
           ref={video}
           className="hero__video"
-          poster={matchMedia(SMALL).matches ? "/media/hero-poster-mobile.jpg" : "/media/hero-poster.jpg"}
+          poster={matchMedia(SMALL).matches ? asset("media/hero-poster-mobile.jpg") : asset("media/hero-poster.jpg")}
           muted
           loop
           playsInline
@@ -105,8 +106,8 @@ export function Hero() {
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
         >
-          <source src="/media/hero-mobile.mp4" type="video/mp4" media={SMALL} />
-          <source src="/media/hero-1920.mp4" type="video/mp4" />
+          <source src={asset("media/hero-mobile.mp4")} type="video/mp4" media={SMALL} />
+          <source src={asset("media/hero-1920.mp4")} type="video/mp4" />
         </video>
         <div className="hero__shade" aria-hidden="true" />
       </div>

@@ -1,3 +1,4 @@
+import { asset } from "./lib/asset";
 export type Difficulty = "Easy" | "Moderate" | "Challenging";
 export type Season = "Spring" | "Summer" | "Monsoon" | "Autumn" | "Winter";
 
@@ -24,7 +25,7 @@ export const treks: Trek[] = [
     difficulty: "Easy",
     seasons: ["Winter", "Spring"],
     price: 14500,
-    image: "/media/trek-kedarkantha.webp",
+    image: asset("media/trek-kedarkantha.webp"),
     blurb: "A snow summit above pine forest, made for a first winter trek.",
   },
   {
@@ -36,7 +37,7 @@ export const treks: Trek[] = [
     difficulty: "Easy",
     seasons: ["Winter", "Spring", "Autumn"],
     price: 13900,
-    image: "/media/trek-kuari.webp",
+    image: asset("media/trek-kuari.webp"),
     blurb: "Oak forest and open meadows with Nanda Devi in view most days.",
   },
   {
@@ -48,7 +49,7 @@ export const treks: Trek[] = [
     difficulty: "Moderate",
     seasons: ["Monsoon"],
     price: 16500,
-    image: "/media/trek-valley-of-flowers.webp",
+    image: asset("media/trek-valley-of-flowers.webp"),
     blurb: "A monsoon valley in full bloom, then the climb to Hemkund lake.",
   },
   {
@@ -60,7 +61,7 @@ export const treks: Trek[] = [
     difficulty: "Moderate",
     seasons: ["Summer", "Monsoon"],
     price: 15900,
-    image: "/media/trek-hampta.webp",
+    image: asset("media/trek-hampta.webp"),
     blurb: "Cross from green Kullu into the bare, bright desert of Spiti.",
   },
   {
@@ -72,7 +73,7 @@ export const treks: Trek[] = [
     difficulty: "Challenging",
     seasons: ["Summer", "Monsoon"],
     price: 24000,
-    image: "/media/trek-markha.webp",
+    image: asset("media/trek-markha.webp"),
     blurb: "Canyons, monasteries and village homestays under the Kongmaru La.",
   },
   {
@@ -84,7 +85,7 @@ export const treks: Trek[] = [
     difficulty: "Challenging",
     seasons: ["Summer", "Autumn"],
     price: 21500,
-    image: "/media/trek-rupin.webp",
+    image: asset("media/trek-rupin.webp"),
     blurb: "Cliff villages, a three-tier waterfall and a steep snow gully to finish.",
   },
   {
@@ -96,7 +97,7 @@ export const treks: Trek[] = [
     difficulty: "Challenging",
     seasons: ["Summer", "Monsoon"],
     price: 23000,
-    image: "/media/trek-pin-bhaba.webp",
+    image: asset("media/trek-pin-bhaba.webp"),
     blurb: "From Kinnaur forest to the high, wide emptiness of the Pin valley.",
   },
   {
@@ -108,7 +109,7 @@ export const treks: Trek[] = [
     difficulty: "Challenging",
     seasons: ["Spring", "Autumn"],
     price: 27500,
-    image: "/media/trek-goechala.webp",
+    image: asset("media/trek-goechala.webp"),
     blurb: "Rhododendron forest to a sunrise face to face with Kanchenjunga.",
   },
 ];
@@ -137,19 +138,19 @@ export const camps = [
 ];
 
 export const gallery = [
-  { image: "/media/gallery-1.webp", day: "Day 2", place: "Jiskun", line: "Slate roofs on the cliff edge, and tea before you have taken your pack off." },
-  { image: "/media/gallery-2.webp", day: "Day 5", place: "Dhanderas Thach", line: "A wide bowl of grass with the waterfall in view from every tent." },
-  { image: "/media/gallery-3.webp", day: "Day 7", place: "The gully", line: "An early start, crampons on, one steady step at a time." },
-  { image: "/media/gallery-4.webp", day: "Day 7", place: "Rupin Pass, 4,650 m", line: "Prayer flags, a lot of wind, and Kinnaur laid out below." },
-  { image: "/media/gallery-5.webp", day: "Day 8", place: "Sangla", line: "Apple orchards, a hot meal and a road home." },
+  { image: asset("media/gallery-1.webp"), day: "Day 2", place: "Jiskun", line: "Slate roofs on the cliff edge, and tea before you have taken your pack off." },
+  { image: asset("media/gallery-2.webp"), day: "Day 5", place: "Dhanderas Thach", line: "A wide bowl of grass with the waterfall in view from every tent." },
+  { image: asset("media/gallery-3.webp"), day: "Day 7", place: "The gully", line: "An early start, crampons on, one steady step at a time." },
+  { image: asset("media/gallery-4.webp"), day: "Day 7", place: "Rupin Pass, 4,650 m", line: "Prayer flags, a lot of wind, and Kinnaur laid out below." },
+  { image: asset("media/gallery-5.webp"), day: "Day 8", place: "Sangla", line: "Apple orchards, a hot meal and a road home." },
 ];
 
 export const leaders = [
-  { name: "Govind Rawat", role: "Lead guide, Garhwal", years: 22, image: "/media/leader-1.webp" },
-  { name: "Ananya Negi", role: "Trek leader, Himachal", years: 7, image: "/media/leader-2.webp" },
-  { name: "Tsering Dorjay", role: "Lead guide, Ladakh", years: 16, image: "/media/leader-3.webp" },
-  { name: "Pema Lhamu Bhutia", role: "Mountaineer, Sikkim", years: 11, image: "/media/leader-4.webp" },
-  { name: "Rohit Thakur", role: "Trek leader, Kullu", years: 9, image: "/media/leader-5.webp" },
+  { name: "Govind Rawat", role: "Lead guide, Garhwal", years: 22, image: asset("media/leader-1.webp") },
+  { name: "Ananya Negi", role: "Trek leader, Himachal", years: 7, image: asset("media/leader-2.webp") },
+  { name: "Tsering Dorjay", role: "Lead guide, Ladakh", years: 16, image: asset("media/leader-3.webp") },
+  { name: "Pema Lhamu Bhutia", role: "Mountaineer, Sikkim", years: 11, image: asset("media/leader-4.webp") },
+  { name: "Rohit Thakur", role: "Trek leader, Kullu", years: 9, image: asset("media/leader-5.webp") },
 ];
 
 export const formatPrice = (n: number) => "₹" + n.toLocaleString("en-IN");

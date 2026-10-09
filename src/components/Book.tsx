@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { gsap, MQ, useGSAP } from "../lib/gsap";
+import { asset } from "../lib/asset";
 import { treks } from "../data";
 import { Magnetic } from "./Magnetic";
 
@@ -45,7 +46,7 @@ export function Book() {
     <section ref={root} className="book" id="book" aria-labelledby="book-title">
       <div className="book__inner">
         <div className="book__panel">
-          <img src="/media/book.webp" alt="Sunrise on the Kanchenjunga range over a still lake on the Goechala trek" width={960} height={1280} loading="lazy" decoding="async" />
+          <img src={asset("media/book.webp")} alt="Sunrise on the Kanchenjunga range over a still lake on the Goechala trek" width={960} height={1280} loading="lazy" decoding="async" />
           <div className="book__panel-text">
             <h2 id="book-title">Tell us where you want to walk.</h2>
             <p>A trek leader, not a sales desk, replies within one working day with dates and honest advice.</p>
